@@ -43,8 +43,12 @@ function setDate(){
     hourNYPointer.style.transform = `rotate(${hourNYDeg}deg)`;
     hourLONPointer.style.transform = `rotate(${hourLONDeg}deg)`;
 
-    PTtime.innerHTML = `${hour}:${min}`;
-    LONtime.innerHTML = `${(hour + 1) % 24}:${min}`;
-    NYtime.innerHTML = `${(hour - 4) % 24}:${min}`;
+    let minDisplay = min < 10 ? "0" + min:min;
+    const hourNY = hour - 4;
+    const hourLON = hour + 1 ;
+
+    PTtime.innerHTML = `${hour < 10 ? "0" + hour : hour}:${minDisplay}`;
+    LONtime.innerHTML = `${(hourLON < 10 ? "0" + hourLON : hourLON) % 24}:${minDisplay}`;
+    NYtime.innerHTML = `${(hourNY < 10 ? "0" + hourNY : hourNY) % 24}:${minDisplay}`;
 
 }
