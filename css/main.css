@@ -1,0 +1,98 @@
+* {
+  border: none;
+  margin: 0%;
+  padding: 0%;
+  color: #ffecbd;
+}
+
+h2 {
+  margin: 1rem;
+  text-transform: uppercase;
+}
+
+body {
+  background: url(../img/plane.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.timezones {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.timezones__zone {
+  margin: auto 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clock {
+  height: 10rem;
+  width: 10rem;
+  background: transparent;
+  border: 10px solid white;
+  border-radius: 50%;
+  padding: 2rem;
+}
+
+.clock__face {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.clock__pointer {
+  -webkit-transition: all 0.05s;
+  transition: all 0.05s;
+  -webkit-animation-timing-function: cubic-bezier(0.26, 3.23, 0.58, 1);
+          animation-timing-function: cubic-bezier(0.26, 3.23, 0.58, 1);
+  position: absolute;
+  background: white;
+  width: 50%;
+  top: 50%;
+}
+
+#secPT, #secNY, #secSHA {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  height: 2px;
+}
+
+#minPT, #minNY, #minSHA {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  height: 3px;
+}
+
+#hourPT, #hourNY, #hourSHA {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  height: 4px;
+}
+/*# sourceMappingURL=main.css.map */

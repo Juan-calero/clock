@@ -1,0 +1,66 @@
+*{
+    border: none;
+    margin: 0%;
+    padding: 0%;
+    color: #ffecbd;
+}
+h2{
+    margin: 1rem;
+    text-transform: uppercase;
+}
+
+body{
+    background: url(../img/plane.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.timezones{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__zone{
+        margin: auto 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+}
+.clock{
+    height: 10rem;
+    width: 10rem;
+    background: transparent;
+    border: 10px solid white;
+    border-radius: 50%;
+    padding: 2rem;
+    &__face{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        transform: translateY(-3px);
+    }
+    &__pointer{
+        transition: all 0.05s;
+        animation-timing-function: cubic-bezier(0.26, 3.23, 0.58, 1);
+        position: absolute;
+        background: white;
+        width: 50%;
+        top: 50%;
+    }
+}
+#secPT, #secNY, #secSHA{
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    height: 2px;
+}
+#minPT, #minNY, #minSHA{
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    height: 3px;
+}
+#hourPT, #hourNY, #hourSHA{
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    height: 4px;
+}
