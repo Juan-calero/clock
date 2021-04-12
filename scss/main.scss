@@ -2,7 +2,8 @@
     border: none;
     margin: 0%;
     padding: 0%;
-    color: #ffecbd;
+    color: white;
+    font-family: sans-serif;
 }
 h2{
     margin: 1rem;
@@ -10,7 +11,7 @@ h2{
 }
 
 body{
-    background: url(../img/plane.jpg);
+    background: url(../img/night.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -30,7 +31,8 @@ body{
 .clock{
     height: 10rem;
     width: 10rem;
-    background: transparent;
+    background: rgba($color: #000000, $alpha: 0.1);
+    box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.2);
     border: 10px solid white;
     border-radius: 50%;
     padding: 2rem;
@@ -41,6 +43,9 @@ body{
         transform: translateY(-3px);
     }
     &__pointer{
+        border-radius: 20px;
+        transform: rotate(90deg);
+        transform-origin: 100%;
         transition: all 0.05s;
         animation-timing-function: cubic-bezier(0.26, 3.23, 0.58, 1);
         position: absolute;
@@ -49,18 +54,37 @@ body{
         top: 50%;
     }
 }
-#secPT, #secNY, #secSHA{
-    transform: rotate(90deg);
-    transform-origin: 100%;
+#secPT, #secNY, #secLON{
+    opacity: 0.6;
     height: 2px;
 }
-#minPT, #minNY, #minSHA{
-    transform: rotate(90deg);
-    transform-origin: 100%;
+#minPT, #minNY, #minLON{
+    opacity: 0.8;
     height: 3px;
 }
-#hourPT, #hourNY, #hourSHA{
-    transform: rotate(90deg);
-    transform-origin: 100%;
+#hourPT, #hourNY, #hourLON{
     height: 4px;
+}
+
+@media screen and (max-width: 1024px){
+    .timezones{
+        flex-wrap: wrap;
+        &__zone{
+            margin: 2%;
+        }
+    }
+    .clock{
+        width: 10vh;
+        height: 10vh;
+    }
+}
+
+@media screen and (max-width: 560px){
+    .timezones{
+        flex-direction: column;
+    }
+    .clock{
+        width: 10vh;
+        height: 10vh;
+    }
 }

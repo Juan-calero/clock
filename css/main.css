@@ -2,7 +2,8 @@
   border: none;
   margin: 0%;
   padding: 0%;
-  color: #ffecbd;
+  color: white;
+  font-family: sans-serif;
 }
 
 h2 {
@@ -11,7 +12,7 @@ h2 {
 }
 
 body {
-  background: url(../img/plane.jpg);
+  background: url(../img/night.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -47,7 +48,9 @@ body {
 .clock {
   height: 10rem;
   width: 10rem;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   border: 10px solid white;
   border-radius: 50%;
   padding: 2rem;
@@ -62,6 +65,11 @@ body {
 }
 
 .clock__pointer {
+  border-radius: 20px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
   -webkit-transition: all 0.05s;
   transition: all 0.05s;
   -webkit-animation-timing-function: cubic-bezier(0.26, 3.23, 0.58, 1);
@@ -72,27 +80,44 @@ body {
   top: 50%;
 }
 
-#secPT, #secNY, #secSHA {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
+#secPT, #secNY, #secLON {
+  opacity: 0.6;
   height: 2px;
 }
 
-#minPT, #minNY, #minSHA {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
+#minPT, #minNY, #minLON {
+  opacity: 0.8;
   height: 3px;
 }
 
-#hourPT, #hourNY, #hourSHA {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
+#hourPT, #hourNY, #hourLON {
   height: 4px;
+}
+
+@media screen and (max-width: 1024px) {
+  .timezones {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .timezones__zone {
+    margin: 2%;
+  }
+  .clock {
+    width: 10vh;
+    height: 10vh;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .timezones {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .clock {
+    width: 10vh;
+    height: 10vh;
+  }
 }
 /*# sourceMappingURL=main.css.map */
