@@ -8,6 +8,11 @@ const secNYPointer = document.getElementById('secNY');
 const minNYPointer = document.getElementById('minNY');
 const hourNYPointer = document.getElementById('hourNY');
 
+const PTtime = document.getElementById('PTtime');
+const LONtime = document.getElementById('LONtime');
+const NYtime = document.getElementById('NYtime');
+
+
 setInterval(setDate, 1000);
 
 function setDate(){
@@ -37,4 +42,9 @@ function setDate(){
     hourPointer.style.transform = `rotate(${hourDeg}deg)`;
     hourNYPointer.style.transform = `rotate(${hourNYDeg}deg)`;
     hourLONPointer.style.transform = `rotate(${hourLONDeg}deg)`;
+
+    PTtime.innerHTML = `${hour}:${min}`;
+    LONtime.innerHTML = `${(hour + 1) % 24}:${min}`;
+    NYtime.innerHTML = `${(hour - 4) % 24}:${min}`;
+
 }

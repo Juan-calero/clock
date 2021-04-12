@@ -6,8 +6,17 @@
     font-family: sans-serif;
 }
 h2{
+    text-shadow: 01px 01px 5px rgba($color: #000, $alpha: 0.9);
+    color: rgb(255, 144, 40);
+    font-size: 0.8rem;
     margin: 1rem;
     text-transform: uppercase;
+    margin-bottom: 0%;
+}
+p{
+    text-shadow: 01px 01px 5px rgba($color: #000, $alpha: 0.9);
+    font-size: 3rem;
+    margin: 0%;
 }
 
 body{
@@ -77,14 +86,22 @@ body{
         width: 10vh;
         height: 10vh;
     }
+    p{
+        font-size: 2rem;
+
+    }
 }
 
-@media screen and (max-width: 560px){
+@media screen and (max-width: 545px){
     .timezones{
         flex-direction: column;
     }
     .clock{
         width: 10vh;
         height: 10vh;
+    }
+    p{
+        font-size: 2.1rem;
+
     }
 }
